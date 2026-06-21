@@ -1,4 +1,4 @@
-const API_BASE = 'http://localhost:3000/api/v1';
+const API_BASE = '/api/v1';
 
 export async function uploadXml(files: File[]): Promise<{ message: string; jobs: { fileName: string; jobId: string }[] }> {
   const formData = new FormData();

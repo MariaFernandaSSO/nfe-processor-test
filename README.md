@@ -58,7 +58,11 @@ nfe-processor-test/
 ### Docker Compose (recomendado)
 
 ```bash
-docker compose up --build
+# Sobe os serviços
+docker compose up --build -d
+
+# Cria as tabelas no banco
+docker compose exec backend sh -c "npx prisma migrate dev --name init"
 ```
 
 Isso inicia:
@@ -67,6 +71,8 @@ Isso inicia:
 - Backend na porta 3000
 - Frontend na porta 5173
 - Worker (processamento assíncrono)
+
+O frontend faz proxy das requisições `/api` para o backend automaticamente via Vite.
 
 ### Execução local
 
@@ -124,9 +130,12 @@ Os clientes são definidos em `backend/data/clients.json` e usados pelo worker p
 ### Exemplo de upload
 
 ```bash
+# Enviar um XML de teste
 curl -X POST http://localhost:3000/api/v1/xml/upload \
-  -F "files=@nota-fiscal.xml"
+  -F "files=@backend/data/samples/nfe_entrada.xml"
 ```
+
+Há arquivos de exemplo em `backend/data/samples/` para testar os cenários de entrada, saída, não identificado e XML inválido.
 
 ## Testes
 
