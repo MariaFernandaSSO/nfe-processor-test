@@ -11,7 +11,7 @@ export type ParsedNfe = {
   raw?: any;
 };
 
-function findObjectByKeys(obj: any, keys: string[]): any {
+export function findObjectByKeys(obj: any, keys: string[]): any {
   if (!obj || typeof obj !== 'object') return undefined;
   for (const k of Object.keys(obj)) {
     if (keys.includes(k)) return obj[k];
@@ -23,7 +23,7 @@ function findObjectByKeys(obj: any, keys: string[]): any {
   return undefined;
 }
 
-function findValueByKeys(obj: any, keys: string[]): any {
+export function findValueByKeys(obj: any, keys: string[]): any {
   if (!obj || typeof obj !== 'object') return undefined;
   for (const k of Object.keys(obj)) {
     if (keys.includes(k)) return obj[k];
@@ -41,7 +41,7 @@ export function normalizeCnpj(v?: string) {
 }
 
 export function parseXml(xml: string): ParsedNfe {
-  const parser = new XMLParser({ ignoreAttributes: false, attributeNamePrefix: '@_' });
+  const parser = new XMLParser({ ignoreAttributes: false, attributeNamePrefix: '@_', parseTagValue: false });
   const parsed = parser.parse(xml);
 
   const chave = findValueByKeys(parsed, ['chNFe', 'chave']);

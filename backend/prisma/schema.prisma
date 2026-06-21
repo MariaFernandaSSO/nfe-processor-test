@@ -10,13 +10,14 @@ datasource db {
 model Nfe {
   id                 String   @id @default(uuid())
   chave              String?  @unique(map: "idx_chave")
+  xml_hash           String?  @unique
   emitente_nome      String?
   emitente_cnpj      String?
   destinatario_nome  String?
   destinatario_cnpj  String?
   valor_total        Decimal? @db.Decimal(18, 2)
   data_emissao       DateTime?
-  operacao           String?  // entrada | saida | nao_identificado
+  operacao           String?
   raw_xml            String?
   createdAt          DateTime @default(now())
   updatedAt          DateTime @updatedAt
