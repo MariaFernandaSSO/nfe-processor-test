@@ -58,7 +58,7 @@ nfe-processor-test/
 ### Docker Compose (recomendado)
 
 ```bash
-docker-compose up --build
+docker compose up --build
 ```
 
 Isso inicia:
@@ -88,6 +88,8 @@ npm install
 npm run dev
 ```
 
+O frontend fica disponível em `http://localhost:5173`.
+
 ### Variáveis de ambiente (backend)
 
 | Variável | Descrição | Padrão |
@@ -98,7 +100,7 @@ npm run dev
 
 ### Clientes internos
 
-Os clientes são definidos em `backend/data/clients.json`:
+Os clientes são definidos em `backend/data/clients.json` e usados pelo worker para identificar a operação:
 
 ```json
 {
@@ -118,6 +120,13 @@ Os clientes são definidos em `backend/data/clients.json`:
 | GET | `/api/v1/nfe/resumo` | Resumo por cliente (compra/venda) |
 | GET | `/api/v1/nfe/nao-identificados` | Lista NF-es sem vínculo |
 | GET | `/api/docs` | Documentação Swagger |
+
+### Exemplo de upload
+
+```bash
+curl -X POST http://localhost:3000/api/v1/xml/upload \
+  -F "files=@nota-fiscal.xml"
+```
 
 ## Testes
 
