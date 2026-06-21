@@ -1,3 +1,4 @@
+import { describe, expect, test } from '@jest/globals';
 import { parseXml, identifyOperation, normalizeCnpj } from '../src/nfeProcessor';
 
 const sampleXml = `<?xml version="1.0" encoding="UTF-8"?>
@@ -58,4 +59,5 @@ describe('nfeProcessor', () => {
     expect(op).toBe('nao_identificado');
   });
 });
+
 

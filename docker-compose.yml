@@ -30,6 +30,24 @@ services:
       - redis
     command: npm run dev
 
+  worker:
+    build: ./backend
+    working_dir: /usr/src/app
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/nfe_db
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      - postgres
+      - redis
+    command: npm run worker
+
+  frontend:
+    build: ./frontend
+    ports:
+      - '5173:5173'
+    depends_on:
+      - backend
+
 volumes:
   postgres-data:
 
