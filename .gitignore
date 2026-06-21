@@ -11,3 +11,5 @@ yarn-error.log*
 .pnp
 .pnp.js
 .vscode/
+.idea/
+todo.md
