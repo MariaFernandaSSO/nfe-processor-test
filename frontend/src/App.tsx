@@ -11,12 +11,26 @@ export default function App() {
 
   return (
     <div className="app">
-      <h1>NFe Processor</h1>
-      <nav>
-        <button className={tab === 'upload' ? 'active' : ''} onClick={() => setTab('upload')}>Upload</button>
-        <button className={tab === 'resumo' ? 'active' : ''} onClick={() => setTab('resumo')}>Resumo</button>
-        <button className={tab === 'nao-identificados' ? 'active' : ''} onClick={() => setTab('nao-identificados')}>Não Identificados</button>
-      </nav>
+      <div className="header">
+        <div className="header-icon">N</div>
+        <div>
+          <h1>NFe Processor</h1>
+          <div className="header-sub">Processamento assíncrono de notas fiscais</div>
+        </div>
+      </div>
+
+      <div className="nav">
+        <button className={tab === 'upload' ? 'active' : ''} onClick={() => setTab('upload')}>
+          Upload
+        </button>
+        <button className={tab === 'resumo' ? 'active' : ''} onClick={() => setTab('resumo')}>
+          Resumo
+        </button>
+        <button className={tab === 'nao-identificados' ? 'active' : ''} onClick={() => setTab('nao-identificados')}>
+          Não Identificados
+        </button>
+      </div>
+
       {tab === 'upload' && <UploadXml />}
       {tab === 'resumo' && <ResumoClientes />}
       {tab === 'nao-identificados' && <NaoIdentificados />}
