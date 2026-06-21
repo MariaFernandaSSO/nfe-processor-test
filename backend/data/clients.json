@@ -1,0 +1,7 @@
+{
+  "clients": [
+    { "id": 1, "name": "Empresa ABC", "cnpj": "12345678000199" },
+    { "id": 2, "name": "Empresa XPTO", "cnpj": "98765432000155" }
+  ]
+}
+
