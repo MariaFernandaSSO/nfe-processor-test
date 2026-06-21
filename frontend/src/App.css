@@ -187,6 +187,28 @@ body {
   color: #2563eb;
 }
 
+.btn-remove {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #94a3b8;
+  padding: 0.2rem;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.15s;
+}
+
+.btn-remove:hover:not(:disabled) {
+  color: #ef4444;
+  background: #fee2e2;
+}
+
+.btn-remove:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
 /* Buttons */
 .btn {
   display: inline-flex;
