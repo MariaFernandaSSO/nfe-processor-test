@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nfeProc>
+  <NFe>
+    <infNFe>
+      <ide>
+        <dhEmi>2026-06-21T14:00:00-03:00</dhEmi>
+      </ide>
+      <emit>
+        <CNPJ>98.765.432/0001-55</CNPJ>
+        <xNome>Empresa XPTO</xNome>
+      </emit>
+      <dest>
+        <CNPJ>99.999.999/0001-99</CNPJ>
+        <xNome>Cliente Externo S.A.</xNome>
+      </dest>
+      <total>
+        <ICMSTot>
+          <vNF>3200.50</vNF>
+        </ICMSTot>
+      </total>
+    </infNFe>
+  </NFe>
+  <chNFe>35200698765432000155651000000002234567890</chNFe>
+</nfeProc>

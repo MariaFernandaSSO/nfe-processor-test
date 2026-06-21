@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nfeProc>
+  <NFe>
+    <infNFe>
+      <ide>
+        <dhEmi>2026-06-19T08:15:00-03:00</dhEmi>
+      </ide>
+      <emit>
+        <CNPJ>55.555.555/0001-55</CNPJ>
+        <xNome>Empresa Aleatoria Ltda</xNome>
+      </emit>
+      <dest>
+        <CNPJ>77.777.777/0001-77</CNPJ>
+        <xNome>Outra Empresa S.A.</xNome>
+      </dest>
+      <total>
+        <ICMSTot>
+          <vNF>750.30</vNF>
+        </ICMSTot>
+      </total>
+    </infNFe>
+  </NFe>
+  <chNFe>35200655555555000155651000000003456789012</chNFe>
+</nfeProc>
