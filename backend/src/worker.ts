@@ -21,8 +21,8 @@ if (fs.existsSync(clientsFile)) {
 }
 
 const connection = redisUrl
-  ? new IORedis(redisUrl)
-  : { host: process.env.REDIS_HOST || '127.0.0.1', port: process.env.REDIS_PORT ? Number(process.env.REDIS_PORT) : 6379 };
+  ? new IORedis(redisUrl, { maxRetriesPerRequest: null })
+  : { host: process.env.REDIS_HOST || '127.0.0.1', port: process.env.REDIS_PORT ? Number(process.env.REDIS_PORT) : 6379, maxRetriesPerRequest: null };
 
 const worker = new Worker(
   'xml-processing',

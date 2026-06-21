@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nfeProc>
+  <NFe>
+    <infNFe>
+      <ide>
+        <dhEmi>2026-06-20T10:30:00-03:00</dhEmi>
+      </ide>
+      <emit>
+        <CNPJ>11.111.111/0001-11</CNPJ>
+        <xNome>Fornecedor Externo Ltda</xNome>
+      </emit>
+      <dest>
+        <CNPJ>12.345.678/0001-99</CNPJ>
+        <xNome>Empresa ABC</xNome>
+      </dest>
+      <total>
+        <ICMSTot>
+          <vNF>1580.00</vNF>
+        </ICMSTot>
+      </total>
+    </infNFe>
+  </NFe>
+  <chNFe>35200611111111111111650610000000011234567890</chNFe>
+</nfeProc>
